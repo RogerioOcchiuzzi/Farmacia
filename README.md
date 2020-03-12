@@ -3,6 +3,6 @@
 Programa para gerenciamento de farmácias.
 
 Usa:
--MVC.
--Testes Unitários.
--SQL (SQLite).
+- MVC.
+- Testes Unitários.
+- SQL (SQLite).
