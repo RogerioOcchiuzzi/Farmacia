@@ -1,5 +1,5 @@
 package farmacia;
-
+import farmacia.view.Principal;
 
 public class Farmacia {
 
@@ -9,6 +9,8 @@ public class Farmacia {
     public static void main(String[] args) {
         // TODO code application logic here
           
+        new Principal().setVisible(true);
+        
     }
     
 }
