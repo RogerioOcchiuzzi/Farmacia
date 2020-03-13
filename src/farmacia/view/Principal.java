@@ -20,6 +20,7 @@ public class Principal extends javax.swing.JFrame {
 
     
     private Controller controller;
+    private Float valorTotal;
     
     public Principal(Controller controller) {
         
@@ -29,6 +30,7 @@ public class Principal extends javax.swing.JFrame {
         centralizaTela();
         
         this.controller = controller;
+        this.valorTotal = 0.00f;
         
     }
     
@@ -81,17 +83,17 @@ public class Principal extends javax.swing.JFrame {
         listaLabelVenda = new javax.swing.JLabel();
         titulo2LabelVenda = new javax.swing.JLabel();
         fotoLabelVenda = new javax.swing.JLabel();
-        pesquisarButtonVenda = new javax.swing.JButton();
         descricaoLabelVenda = new javax.swing.JLabel();
         adicionarButtonVenda = new javax.swing.JButton();
         titulo3LabelVenda = new javax.swing.JLabel();
         concluirButtonVenda = new javax.swing.JButton();
         titulo4LabelVenda = new javax.swing.JLabel();
         ListaDeRemediosComboBoxVenda = new javax.swing.JComboBox<>();
+        valorTotalLabelVenda = new javax.swing.JLabel();
+        limparButtonVendfa = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         titulo1LabelEstoque = new javax.swing.JLabel();
         fotoLabelEstoque = new javax.swing.JLabel();
-        pesquisarButtonEstoque = new javax.swing.JButton();
         descricaoLabelEstoque = new javax.swing.JLabel();
         titulo2LabelEstoque = new javax.swing.JLabel();
         titulo3LabelEstoque = new javax.swing.JLabel();
@@ -103,12 +105,14 @@ public class Principal extends javax.swing.JFrame {
         setTitle("Farmácia");
         setResizable(false);
 
+        titulo1jLabelVenda.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         titulo1jLabelVenda.setText("Lista de itens");
 
-        listaLabelVenda.setText("Nenhum");
+        listaLabelVenda.setText("<html>Nome / Preço<br><br>");
         listaLabelVenda.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         listaLabelVenda.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
+        titulo2LabelVenda.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         titulo2LabelVenda.setText("Pesquisar item");
 
         fotoLabelVenda.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -120,20 +124,18 @@ public class Principal extends javax.swing.JFrame {
         fotoLabelVenda.setPreferredSize(new java.awt.Dimension(110, 143));
         fotoLabelVenda.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
 
-        pesquisarButtonVenda.setText("Pesquisar");
-        pesquisarButtonVenda.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                pesquisarButtonVendaActionPerformed(evt);
-            }
-        });
-
         descricaoLabelVenda.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        descricaoLabelVenda.setText("<html>Nome:?????<br><br>Preço:R$00,00<br><br>Quantidade:???<br><br><br>bula:<br>?????");
         descricaoLabelVenda.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         descricaoLabelVenda.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         adicionarButtonVenda.setText("Adicionar");
+        adicionarButtonVenda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                adicionarButtonVendaActionPerformed(evt);
+            }
+        });
 
+        titulo3LabelVenda.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         titulo3LabelVenda.setText("<html>Adicionar item <br>na compra");
 
         concluirButtonVenda.setText("Concluir");
@@ -143,9 +145,20 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
+        titulo4LabelVenda.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         titulo4LabelVenda.setText("Descrição do item");
 
-        ListaDeRemediosComboBoxVenda.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Dorflex", "Xarelto", "Selozok", "Neosaldina", "Torsilax", "Aradois", "Glifage XR", "Addera D3", "Anthelios", "Buscopan composto" }));
+        ListaDeRemediosComboBoxVenda.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "Dorflex", "Xarelto", "Selozok", "Neosaldina", "Torsilax", "Aradois", "Glifage XR", "Addera D3", "Anthelios", "Buscopan composto" }));
+        ListaDeRemediosComboBoxVenda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ListaDeRemediosComboBoxVendaActionPerformed(evt);
+            }
+        });
+
+        valorTotalLabelVenda.setText("Valor total R$ 0.00");
+        valorTotalLabelVenda.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        limparButtonVendfa.setText("Limpar");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -155,36 +168,33 @@ public class Principal extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(43, 43, 43)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(titulo1jLabelVenda)
-                            .addComponent(listaLabelVenda, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(valorTotalLabelVenda, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(listaLabelVenda, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
+                            .addComponent(titulo1jLabelVenda, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(55, 55, 55)
-                        .addComponent(concluirButtonVenda)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGap(68, 68, 68)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(concluirButtonVenda)
+                            .addComponent(limparButtonVendfa, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(54, 54, 54)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(titulo2LabelVenda, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(ListaDeRemediosComboBoxVenda, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(fotoLabelVenda, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(90, 90, 90)
+                        .addComponent(adicionarButtonVenda))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(62, 62, 62)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(titulo3LabelVenda)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(titulo2LabelVenda, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(20, 20, 20))
-                            .addComponent(fotoLabelVenda, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(52, 52, 52))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(ListaDeRemediosComboBoxVenda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(41, 41, 41))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(pesquisarButtonVenda)
-                        .addGap(81, 81, 81)))
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(descricaoLabelVenda, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(titulo4LabelVenda)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(12, 12, 12)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(adicionarButtonVenda)
-                            .addComponent(titulo3LabelVenda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(51, 51, 51))
+                                .addComponent(descricaoLabelVenda, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(titulo4LabelVenda, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap(52, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -201,38 +211,39 @@ public class Principal extends javax.swing.JFrame {
                             .addComponent(descricaoLabelVenda, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(fotoLabelVenda, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(titulo3LabelVenda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(listaLabelVenda, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(valorTotalLabelVenda, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(titulo3LabelVenda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(ListaDeRemediosComboBoxVenda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(listaLabelVenda, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(20, 20, 20)
+                                .addComponent(ListaDeRemediosComboBoxVenda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addComponent(limparButtonVendfa)))))
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(concluirButtonVenda)
-                    .addComponent(pesquisarButtonVenda)
                     .addComponent(adicionarButtonVenda))
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addContainerGap(35, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Venda", jPanel1);
 
+        titulo1LabelEstoque.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         titulo1LabelEstoque.setText("Pesquisar item");
 
         fotoLabelEstoque.setIcon(new javax.swing.ImageIcon(getClass().getResource("/farmacia/model.imagens/remedio.png"))); // NOI18N
         fotoLabelEstoque.setText("foto item");
         fotoLabelEstoque.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        pesquisarButtonEstoque.setText("Pesquisar");
-        pesquisarButtonEstoque.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                pesquisarButtonEstoqueActionPerformed(evt);
-            }
-        });
-
         descricaoLabelEstoque.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        descricaoLabelEstoque.setText("<html>Nome:?????<br><br>Preço:R$00,00<br><br>Quantidade:???<br><br><br>bula:<br>?????");
         descricaoLabelEstoque.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         descricaoLabelEstoque.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
+        titulo2LabelEstoque.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         titulo2LabelEstoque.setText("Descrição do item");
 
         titulo3LabelEstoque.setText("Mudar quantidade");
@@ -241,34 +252,35 @@ public class Principal extends javax.swing.JFrame {
 
         MudarButtonEstoque.setText("Mudar");
 
-        ListaDeRemediosComboBoxEstoque.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Dorflex", "Xarelto", "Selozok", "Neosaldina", "Torsilax", "Aradois", "Glifage XR", "Addera D3", "Anthelios", "Buscopan composto" }));
+        ListaDeRemediosComboBoxEstoque.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "Dorflex", "Xarelto", "Selozok", "Neosaldina", "Torsilax", "Aradois", "Glifage XR", "Addera D3", "Anthelios", "Buscopan composto" }));
+        ListaDeRemediosComboBoxEstoque.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ListaDeRemediosComboBoxEstoqueActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(66, 66, 66)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ListaDeRemediosComboBoxEstoque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(66, 66, 66)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(fotoLabelEstoque, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(titulo1LabelEstoque, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(55, 55, 55)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(descricaoLabelEstoque, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
+                            .addComponent(titulo2LabelEstoque, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(42, 42, 42)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(fotoLabelEstoque, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(titulo1LabelEstoque))
-                        .addGap(55, 55, 55))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(ListaDeRemediosComboBoxEstoque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(45, 45, 45)))
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(pesquisarButtonEstoque)
-                    .addComponent(titulo2LabelEstoque)
-                    .addComponent(descricaoLabelEstoque, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(42, 42, 42)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(quantidadeTextFieldEstoque, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(titulo3LabelEstoque)
-                    .addComponent(MudarButtonEstoque))
-                .addContainerGap(49, Short.MAX_VALUE))
+                            .addComponent(quantidadeTextFieldEstoque, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(titulo3LabelEstoque)
+                            .addComponent(MudarButtonEstoque))))
+                .addContainerGap(87, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -286,11 +298,9 @@ public class Principal extends javax.swing.JFrame {
                         .addComponent(quantidadeTextFieldEstoque, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(MudarButtonEstoque)))
-                .addGap(39, 39, 39)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(pesquisarButtonEstoque)
-                    .addComponent(ListaDeRemediosComboBoxEstoque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(46, 46, 46))
+                .addGap(26, 26, 26)
+                .addComponent(ListaDeRemediosComboBoxEstoque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(60, 60, 60))
         );
 
         jTabbedPane1.addTab("Estoque", jPanel2);
@@ -315,28 +325,65 @@ public class Principal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_concluirButtonVendaActionPerformed
 
-    private void pesquisarButtonVendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pesquisarButtonVendaActionPerformed
-                
-        String itemSelecionado = ListaDeRemediosComboBoxVenda.
+    private void ListaDeRemediosComboBoxVendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ListaDeRemediosComboBoxVendaActionPerformed
+        
+        if(ListaDeRemediosComboBoxVenda.getSelectedItem() != "-"){
+            
+            String itemSelecionado = ListaDeRemediosComboBoxVenda.
                             getSelectedItem().toString();
         
-        String descricao = controller.retornaDescricao(itemSelecionado);
-        
-        descricaoLabelVenda.setText(descricao);
-        escalarImagemVenda(controller.nomeImagem());
-        
-    }//GEN-LAST:event_pesquisarButtonVendaActionPerformed
+            String descricao = controller.retornaDescricao(itemSelecionado);
 
-    private void pesquisarButtonEstoqueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pesquisarButtonEstoqueActionPerformed
-                
-        String itemSelecionado = ListaDeRemediosComboBoxEstoque.
+            descricaoLabelVenda.setText(descricao);
+            escalarImagemVenda(controller.nomeImagem());
+            
+        }else{
+            descricaoLabelVenda.setText("");
+            escalarImagemVenda("remedio.png");
+        }
+        
+    }//GEN-LAST:event_ListaDeRemediosComboBoxVendaActionPerformed
+
+    private void ListaDeRemediosComboBoxEstoqueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ListaDeRemediosComboBoxEstoqueActionPerformed
+        
+        if(ListaDeRemediosComboBoxEstoque.getSelectedItem() != "-"){
+            
+            String itemSelecionado = ListaDeRemediosComboBoxEstoque.
                             getSelectedItem().toString();
         
-        String descricao = controller.retornaDescricao(itemSelecionado);
+            String descricao = controller.retornaDescricao(itemSelecionado);
+
+            descricaoLabelEstoque.setText(descricao);
+            escalarImagemEstoque(controller.nomeImagem());
+            
+        }else{
+            
+            descricaoLabelEstoque.setText("");
+            escalarImagemEstoque("remedio.png");
+        }
         
-        descricaoLabelEstoque.setText(descricao);
-        escalarImagemEstoque(controller.nomeImagem());
-    }//GEN-LAST:event_pesquisarButtonEstoqueActionPerformed
+    }//GEN-LAST:event_ListaDeRemediosComboBoxEstoqueActionPerformed
+
+    private void adicionarButtonVendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adicionarButtonVendaActionPerformed
+        
+        if(ListaDeRemediosComboBoxVenda.getSelectedItem() != "-"){
+            
+            String nomeItem = controller.getNome();
+            Float precoItem = controller.getPreco();
+
+            String listaString = listaLabelVenda.getText();
+
+            listaString = listaString + nomeItem + " R$" + 
+                    precoItem.toString() + "<br>";
+            listaLabelVenda.setText(listaString);
+
+            this.valorTotal = this.valorTotal + precoItem;
+
+            valorTotalLabelVenda.setText("Valor total R$ " + 
+                    this.valorTotal.toString());
+        }       
+        
+    }//GEN-LAST:event_adicionarButtonVendaActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -352,9 +399,8 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JButton limparButtonVendfa;
     private javax.swing.JLabel listaLabelVenda;
-    private javax.swing.JButton pesquisarButtonEstoque;
-    private javax.swing.JButton pesquisarButtonVenda;
     private javax.swing.JTextField quantidadeTextFieldEstoque;
     private javax.swing.JLabel titulo1LabelEstoque;
     private javax.swing.JLabel titulo1jLabelVenda;
@@ -363,5 +409,6 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel titulo3LabelEstoque;
     private javax.swing.JLabel titulo3LabelVenda;
     private javax.swing.JLabel titulo4LabelVenda;
+    private javax.swing.JLabel valorTotalLabelVenda;
     // End of variables declaration//GEN-END:variables
 }
