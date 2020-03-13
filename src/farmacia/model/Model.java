@@ -15,7 +15,11 @@ public class Model {
     
     private ArrayList arrayBusca;
     
-    public Model(String nomeRemedio){
+    public Model(){
+        
+    }
+    
+    public void fazPesquisa(String nomeRemedioInput){
         
         Connection conexao = null;
 
@@ -23,13 +27,14 @@ public class Model {
 
             Class.forName("org.sqlite.JDBC");
             conexao = DriverManager.getConnection("jdbc:sqlite:BDFarmacia.db");
-            this.arrayBusca = pesquisaTabela(conexao, nomeRemedio);
+            this.arrayBusca = pesquisaTabela(conexao, nomeRemedioInput);
             
         } catch ( Exception e ) {
 
             System.err.println(e.getMessage());
            
-        }
+        }       
+        
     }
     
     public ArrayList getArrayBusca(){

@@ -55,70 +55,67 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="titulo1jLabelVenda" min="-2" max="-2" attributes="0"/>
-                          <Component id="listaLabelVenda" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="titulo1jLabelVenda" min="-2" max="-2" attributes="0"/>
+                                  <Component id="listaLabelVenda" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
                               <Component id="concluirButtonVenda" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
+                      <EmptySpace pref="27" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
-                              <Component id="titulo2LabelVenda" min="-2" pref="150" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="titulo2LabelVenda" min="-2" pref="150" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="fotoLabelVenda" alignment="1" min="-2" pref="150" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace pref="38" max="32767" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="fotoLabelVenda" min="-2" pref="150" max="-2" attributes="0"/>
-                                      <Component id="jScrollPane2" max="32767" attributes="0"/>
-                                  </Group>
-                                  <Component id="pesquisarButtonVenda" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="adicionarButtonVenda" min="-2" max="-2" attributes="0"/>
-                                  <Component id="descricaoLabelVenda" min="-2" pref="150" max="-2" attributes="0"/>
-                                  <Component id="titulo4LabelVenda" min="-2" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                                      <Component id="titulo3LabelVenda" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
+                              <Component id="ListaDeRemediosComboBoxVenda" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="pesquisarButtonVenda" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="81" max="-2" attributes="0"/>
                           </Group>
                       </Group>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="descricaoLabelVenda" min="-2" pref="150" max="-2" attributes="0"/>
+                          <Component id="titulo4LabelVenda" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="adicionarButtonVenda" min="-2" max="-2" attributes="0"/>
+                                  <Component id="titulo3LabelVenda" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="titulo1jLabelVenda" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="titulo4LabelVenda" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="titulo2LabelVenda" min="-2" max="-2" attributes="0"/>
-                          </Group>
+                      <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="titulo1jLabelVenda" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="titulo4LabelVenda" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="titulo2LabelVenda" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="listaLabelVenda" min="-2" pref="250" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="concluirButtonVenda" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
+                          <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="descricaoLabelVenda" min="-2" pref="250" max="-2" attributes="0"/>
                                   <Component id="fotoLabelVenda" min="-2" pref="250" max="-2" attributes="0"/>
@@ -126,16 +123,18 @@
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="titulo3LabelVenda" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jScrollPane2" min="-2" pref="52" max="-2" attributes="0"/>
+                                  <Component id="ListaDeRemediosComboBoxVenda" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
+                          <Component id="listaLabelVenda" min="-2" pref="286" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="concluirButtonVenda" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="pesquisarButtonVenda" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="adicionarButtonVenda" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="30" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -186,6 +185,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Pesquisar"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pesquisarButtonVendaActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="descricaoLabelVenda">
               <Properties>
@@ -213,45 +215,36 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Concluir"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="concluirButtonVendaActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="titulo4LabelVenda">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Descri&#xe7;&#xe3;o do item"/>
               </Properties>
             </Component>
-            <Container class="javax.swing.JScrollPane" name="jScrollPane2">
+            <Component class="javax.swing.JComboBox" name="ListaDeRemediosComboBoxVenda">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="10">
+                    <StringItem index="0" value="Dorflex"/>
+                    <StringItem index="1" value="Xarelto"/>
+                    <StringItem index="2" value="Selozok"/>
+                    <StringItem index="3" value="Neosaldina"/>
+                    <StringItem index="4" value="Torsilax"/>
+                    <StringItem index="5" value="Aradois"/>
+                    <StringItem index="6" value="Glifage XR"/>
+                    <StringItem index="7" value="Addera D3"/>
+                    <StringItem index="8" value="Anthelios"/>
+                    <StringItem index="9" value="Buscopan composto"/>
+                  </StringArray>
+                </Property>
+              </Properties>
               <AuxValues>
-                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
-
-              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-              <SubComponents>
-                <Component class="javax.swing.JList" name="ListajListVenda">
-                  <Properties>
-                    <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
-                      <StringArray count="5">
-                        <StringItem index="0" value="Paracetamol"/>
-                        <StringItem index="1" value="dipirona"/>
-                        <StringItem index="2" value="Diclofenaco"/>
-                        <StringItem index="3" value="Acetona"/>
-                        <StringItem index="4" value="Vitamina E"/>
-                      </StringArray>
-                    </Property>
-                    <Property name="selectionMode" type="int" value="0"/>
-                    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                      <Color id="Default Cursor"/>
-                    </Property>
-                    <Property name="dropMode" type="javax.swing.DropMode" editor="org.netbeans.modules.form.editors.EnumEditor">
-                      <Value id="INSERT"/>
-                    </Property>
-                    <Property name="layoutOrientation" type="int" value="1"/>
-                  </Properties>
-                  <AuxValues>
-                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-                  </AuxValues>
-                </Component>
-              </SubComponents>
-            </Container>
+            </Component>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="jPanel2">
@@ -267,13 +260,21 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="fotoLabelEstoque" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
-                          <Component id="titulo1LabelEstoque" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jScrollPane3" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="fotoLabelEstoque" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                                  <Component id="titulo1LabelEstoque" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="ListaDeRemediosComboBoxEstoque" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="pesquisarButtonEstoque" min="-2" max="-2" attributes="0"/>
                           <Component id="titulo2LabelEstoque" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -281,7 +282,7 @@
                       </Group>
                       <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jTextField1" min="-2" pref="50" max="-2" attributes="0"/>
+                          <Component id="quantidadeTextFieldEstoque" min="-2" pref="50" max="-2" attributes="0"/>
                           <Component id="titulo3LabelEstoque" min="-2" max="-2" attributes="0"/>
                           <Component id="MudarButtonEstoque" min="-2" max="-2" attributes="0"/>
                       </Group>
@@ -292,7 +293,7 @@
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace pref="62" max="32767" attributes="0"/>
+                      <EmptySpace pref="43" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="titulo1LabelEstoque" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="titulo2LabelEstoque" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -303,15 +304,15 @@
                           <Component id="fotoLabelEstoque" min="-2" pref="250" max="-2" attributes="0"/>
                           <Component id="descricaoLabelEstoque" min="-2" pref="250" max="-2" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="jTextField1" min="-2" pref="20" max="-2" attributes="0"/>
+                              <Component id="quantidadeTextFieldEstoque" min="-2" pref="20" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="MudarButtonEstoque" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="jScrollPane3" min="-2" pref="52" max="-2" attributes="0"/>
-                          <Component id="pesquisarButtonEstoque" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="pesquisarButtonEstoque" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="ListaDeRemediosComboBoxEstoque" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
                   </Group>
@@ -341,6 +342,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Pesquisar"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pesquisarButtonEstoqueActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="descricaoLabelEstoque">
               <Properties>
@@ -364,7 +368,7 @@
                 <Property name="text" type="java.lang.String" value="Mudar quantidade"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField1">
+            <Component class="javax.swing.JTextField" name="quantidadeTextFieldEstoque">
               <Properties>
                 <Property name="text" type="java.lang.String" value="000"/>
               </Properties>
@@ -374,39 +378,27 @@
                 <Property name="text" type="java.lang.String" value="Mudar"/>
               </Properties>
             </Component>
-            <Container class="javax.swing.JScrollPane" name="jScrollPane3">
+            <Component class="javax.swing.JComboBox" name="ListaDeRemediosComboBoxEstoque">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="10">
+                    <StringItem index="0" value="Dorflex"/>
+                    <StringItem index="1" value="Xarelto"/>
+                    <StringItem index="2" value="Selozok"/>
+                    <StringItem index="3" value="Neosaldina"/>
+                    <StringItem index="4" value="Torsilax"/>
+                    <StringItem index="5" value="Aradois"/>
+                    <StringItem index="6" value="Glifage XR"/>
+                    <StringItem index="7" value="Addera D3"/>
+                    <StringItem index="8" value="Anthelios"/>
+                    <StringItem index="9" value="Buscopan composto"/>
+                  </StringArray>
+                </Property>
+              </Properties>
               <AuxValues>
-                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
-
-              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-              <SubComponents>
-                <Component class="javax.swing.JList" name="ListajListEstoque">
-                  <Properties>
-                    <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
-                      <StringArray count="5">
-                        <StringItem index="0" value="Paracetamol"/>
-                        <StringItem index="1" value="dipirona"/>
-                        <StringItem index="2" value="Diclofenaco"/>
-                        <StringItem index="3" value="Acetona"/>
-                        <StringItem index="4" value="Vitamina E"/>
-                      </StringArray>
-                    </Property>
-                    <Property name="selectionMode" type="int" value="0"/>
-                    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                      <Color id="Default Cursor"/>
-                    </Property>
-                    <Property name="dropMode" type="javax.swing.DropMode" editor="org.netbeans.modules.form.editors.EnumEditor">
-                      <Value id="INSERT"/>
-                    </Property>
-                    <Property name="layoutOrientation" type="int" value="1"/>
-                  </Properties>
-                  <AuxValues>
-                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-                  </AuxValues>
-                </Component>
-              </SubComponents>
-            </Container>
+            </Component>
           </SubComponents>
         </Container>
       </SubComponents>
