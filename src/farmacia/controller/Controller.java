@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public class Controller {
     
     private Model model;
-    private String imagenId;
+    private Integer imagenId;
     
     public Controller(Model model){
         
@@ -26,7 +26,8 @@ public class Controller {
         
         ArrayList arrayRemedio = model.getArrayBusca();
         
-        this.imagenId = arrayRemedio.get(0).toString();
+        this.imagenId = (int) arrayRemedio.get(0);
+        this.imagenId -=1;
        
         descricaoRemedio = "<html>Nome: " +arrayRemedio.get(1).toString() +
                 "<br><br>Preço: R$" +arrayRemedio.get(4).toString() +
@@ -39,7 +40,7 @@ public class Controller {
     
     public String nomeImagem(){
         
-        return this.imagenId + ".png";
+        return this.imagenId.toString() + ".png";
     }
     
 }

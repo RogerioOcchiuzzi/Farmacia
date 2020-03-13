@@ -24,7 +24,8 @@ public class Principal extends javax.swing.JFrame {
     public Principal(Controller controller) {
         
         initComponents();
-        escalarImagem();
+        escalarImagemVenda("remedio.png");
+        escalarImagemEstoque("remedio.png");
         centralizaTela();
         
         this.controller = controller;
@@ -36,10 +37,10 @@ public class Principal extends javax.swing.JFrame {
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
     }
     
-    public void escalarImagem(){
+    public void escalarImagemVenda(String nomeImagem){
         
         ImageIcon imagemMudarTamanho = new javax.swing.ImageIcon(getClass().
-                getResource("/farmacia/model.imagens/remedio.png"));
+                getResource("/farmacia/model/imagens/"+nomeImagem));
         
         Image img = imagemMudarTamanho.getImage();
         
@@ -48,11 +49,20 @@ public class Principal extends javax.swing.JFrame {
                 fotoLabelVenda.getHeight(), Image.SCALE_SMOOTH);        
         ImageIcon iconeEscalado = new ImageIcon(imgEscalada);        
         fotoLabelVenda.setIcon(iconeEscalado);
+
+    }
+    
+    public void escalarImagemEstoque(String nomeImagem){
+        
+        ImageIcon imagemMudarTamanho = new javax.swing.ImageIcon(getClass().
+                getResource("/farmacia/model/imagens/"+nomeImagem));
+        
+        Image img = imagemMudarTamanho.getImage();
         
         //escala Imagem do estoque
-        imgEscalada = img.getScaledInstance(fotoLabelEstoque.getWidth(),
+        Image imgEscalada = img.getScaledInstance(fotoLabelEstoque.getWidth(),
                 fotoLabelEstoque.getHeight(), Image.SCALE_SMOOTH);        
-        iconeEscalado = new ImageIcon(imgEscalada);        
+        ImageIcon iconeEscalado= new ImageIcon(imgEscalada);        
         fotoLabelEstoque.setIcon(iconeEscalado);
     }
 
@@ -313,6 +323,7 @@ public class Principal extends javax.swing.JFrame {
         String descricao = controller.retornaDescricao(itemSelecionado);
         
         descricaoLabelVenda.setText(descricao);
+        escalarImagemVenda(controller.nomeImagem());
         
     }//GEN-LAST:event_pesquisarButtonVendaActionPerformed
 
@@ -324,6 +335,7 @@ public class Principal extends javax.swing.JFrame {
         String descricao = controller.retornaDescricao(itemSelecionado);
         
         descricaoLabelEstoque.setText(descricao);
+        escalarImagemEstoque(controller.nomeImagem());
     }//GEN-LAST:event_pesquisarButtonEstoqueActionPerformed
 
 
