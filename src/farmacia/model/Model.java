@@ -70,4 +70,33 @@ public class Model {
         return arrayBusca;
     }
     
+    public void mudaQuantidade(int quantidade, String nomeItem){
+        
+        Connection conexao = null;
+        Statement stmt = null;
+        try {
+
+            Class.forName("org.sqlite.JDBC");
+            conexao = DriverManager.getConnection("jdbc:sqlite:BDFarmacia.db");
+            
+            
+            String sqlString = "UPDATE farmacia SET quantidade = "+
+                    quantidade + "where nome_remedio="+
+                    nomeItem+";";
+
+            conexao.setAutoCommit(false);
+            stmt = conexao.createStatement();
+            ResultSet rs = stmt.executeQuery(sqlString);   
+            rs.close();
+            stmt.close();
+            
+            
+        } catch ( Exception e ) {
+
+            System.err.println(e.getMessage());
+           
+        } 
+        
+    }
+    
 }

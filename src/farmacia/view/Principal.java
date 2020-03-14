@@ -11,6 +11,8 @@ import javax.swing.ImageIcon;
 
 import farmacia.controller.Controller;
 import farmacia.model.Model;
+import java.util.ArrayList;
+import static javax.swing.JOptionPane.showMessageDialog;
 
 /**
  *
@@ -21,6 +23,9 @@ public class Principal extends javax.swing.JFrame {
     
     private Controller controller;
     private Float valorTotal;
+    private String nomeItemVenda;
+    private String nomeItemEstoque;
+    private int quantidadeItemEstoque;
     
     public Principal(Controller controller) {
         
@@ -31,7 +36,9 @@ public class Principal extends javax.swing.JFrame {
         
         this.controller = controller;
         this.valorTotal = 0.00f;
-        
+        this.nomeItemVenda = "-";
+        this.nomeItemEstoque = "-";  
+        this.quantidadeItemEstoque = 0;
     }
     
     public void centralizaTela(){
@@ -159,6 +166,11 @@ public class Principal extends javax.swing.JFrame {
         valorTotalLabelVenda.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         limparButtonVendfa.setText("Limpar");
+        limparButtonVendfa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                limparButtonVendfaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -224,9 +236,9 @@ public class Principal extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(limparButtonVendfa)))))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(concluirButtonVenda)
-                    .addComponent(adicionarButtonVenda))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(adicionarButtonVenda)
+                    .addComponent(concluirButtonVenda))
                 .addContainerGap(35, Short.MAX_VALUE))
         );
 
@@ -248,9 +260,19 @@ public class Principal extends javax.swing.JFrame {
 
         titulo3LabelEstoque.setText("Mudar quantidade");
 
-        quantidadeTextFieldEstoque.setText("000");
+        quantidadeTextFieldEstoque.setText("0");
+        quantidadeTextFieldEstoque.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                quantidadeTextFieldEstoqueKeyReleased(evt);
+            }
+        });
 
         MudarButtonEstoque.setText("Mudar");
+        MudarButtonEstoque.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MudarButtonEstoqueActionPerformed(evt);
+            }
+        });
 
         ListaDeRemediosComboBoxEstoque.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "Dorflex", "Xarelto", "Selozok", "Neosaldina", "Torsilax", "Aradois", "Glifage XR", "Addera D3", "Anthelios", "Buscopan composto" }));
         ListaDeRemediosComboBoxEstoque.addActionListener(new java.awt.event.ActionListener() {
@@ -322,7 +344,23 @@ public class Principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void concluirButtonVendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_concluirButtonVendaActionPerformed
-        // TODO add your handling code here:
+        
+        if(this.valorTotal == 0.00f){
+            
+            showMessageDialog(null, "Lista de compras vazia");
+        }else{
+            
+            listaLabelVenda.setText("<html>Nome / Preço<br><br>");
+        
+            this.valorTotal = 0.00f;
+
+            valorTotalLabelVenda.setText("Valor total R$ " + 
+                    this.valorTotal.toString());
+
+            showMessageDialog(null, "Venda realizada com sucesso");
+            
+        }
+        
     }//GEN-LAST:event_concluirButtonVendaActionPerformed
 
     private void ListaDeRemediosComboBoxVendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ListaDeRemediosComboBoxVendaActionPerformed
@@ -332,7 +370,13 @@ public class Principal extends javax.swing.JFrame {
             String itemSelecionado = ListaDeRemediosComboBoxVenda.
                             getSelectedItem().toString();
         
-            String descricao = controller.retornaDescricao(itemSelecionado);
+            ArrayList arrayRemedio = controller.retornaDescricao(itemSelecionado);
+                    
+                    
+            String descricao = "<html>Nome: " + arrayRemedio.get(1).toString() +
+                "<br><br>Preço: R$" + arrayRemedio.get(4).toString() +
+                "<br><br>Quantidade: " + arrayRemedio.get(3).toString() +
+                "<br><br><br>bula:<br>" + arrayRemedio.get(2).toString();  
 
             descricaoLabelVenda.setText(descricao);
             escalarImagemVenda(controller.nomeImagem());
@@ -350,9 +394,15 @@ public class Principal extends javax.swing.JFrame {
             
             String itemSelecionado = ListaDeRemediosComboBoxEstoque.
                             getSelectedItem().toString();
-        
-            String descricao = controller.retornaDescricao(itemSelecionado);
-
+            
+            ArrayList arrayRemedio = controller.retornaDescricao(itemSelecionado);
+                    
+                    
+            String descricao = "<html>Nome: " + arrayRemedio.get(1).toString() +
+                "<br><br>Preço: R$" + arrayRemedio.get(4).toString() +
+                "<br><br>Quantidade: " + arrayRemedio.get(3).toString() +
+                "<br><br><br>bula:<br>" + arrayRemedio.get(2).toString();          
+            
             descricaoLabelEstoque.setText(descricao);
             escalarImagemEstoque(controller.nomeImagem());
             
@@ -384,6 +434,54 @@ public class Principal extends javax.swing.JFrame {
         }       
         
     }//GEN-LAST:event_adicionarButtonVendaActionPerformed
+
+    private void limparButtonVendfaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limparButtonVendfaActionPerformed
+        
+        listaLabelVenda.setText("<html>Nome / Preço<br><br>");
+        
+        this.valorTotal = 0.00f;
+
+        valorTotalLabelVenda.setText("Valor total R$ " + 
+                this.valorTotal.toString());
+    }//GEN-LAST:event_limparButtonVendfaActionPerformed
+
+    private void MudarButtonEstoqueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MudarButtonEstoqueActionPerformed
+        
+        if(!nomeItemEstoque.contains("-")){
+            
+            
+            controller.mudaQuantidadeEstoque(this.quantidadeItemEstoque, 
+                    this.nomeItemEstoque);
+            
+            String itemSelecionado = ListaDeRemediosComboBoxEstoque.
+                            getSelectedItem().toString();
+            
+            ArrayList arrayRemedio = controller.retornaDescricao(itemSelecionado);
+                    
+                    
+            String descricao = "<html>Nome: " + arrayRemedio.get(1).toString() +
+                "<br><br>Preço: R$" + arrayRemedio.get(4).toString() +
+                "<br><br>Quantidade: " + arrayRemedio.get(3).toString() +
+                "<br><br><br>bula:<br>" + arrayRemedio.get(2).toString();          
+            
+            descricaoLabelEstoque.setText(descricao);
+            escalarImagemEstoque(controller.nomeImagem());
+            
+        }
+    }//GEN-LAST:event_MudarButtonEstoqueActionPerformed
+
+    private void quantidadeTextFieldEstoqueKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_quantidadeTextFieldEstoqueKeyReleased
+        
+        try {
+            
+            this.quantidadeItemEstoque = 
+                    Integer.parseInt(quantidadeTextFieldEstoque.getText());
+            
+        } catch (NumberFormatException nfe) {
+            
+            quantidadeTextFieldEstoque.setText("0");
+        }
+    }//GEN-LAST:event_quantidadeTextFieldEstoqueKeyReleased
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

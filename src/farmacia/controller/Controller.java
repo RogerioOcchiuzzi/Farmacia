@@ -13,6 +13,7 @@ public class Controller {
     private Integer imagenId;
     private float precoRemedio;
     private String nomeRemedio;
+    private int quantidadeItem;
     
     public Controller(Model model){
         
@@ -20,7 +21,7 @@ public class Controller {
         
     }
     
-    public String retornaDescricao(String nomeRemedio){
+    public ArrayList retornaDescricao(String nomeRemedio){
         
         String descricaoRemedio = "";
         
@@ -33,13 +34,15 @@ public class Controller {
         
         this.precoRemedio = (float) arrayRemedio.get(4);
         this.nomeRemedio = arrayRemedio.get(1).toString();
-       
-        descricaoRemedio = "<html>Nome: " + arrayRemedio.get(1).toString() +
-                "<br><br>Preço: R$" + arrayRemedio.get(4).toString() +
-                "<br><br>Quantidade: " + arrayRemedio.get(3).toString() +
-                "<br><br><br>bula:<br>" + arrayRemedio.get(2).toString();
+        this.quantidadeItem = (int) arrayRemedio.get(3);      
         
-        return descricaoRemedio;
+        return arrayRemedio;
+        
+    }
+    
+    public void mudaQuantidadeEstoque(int quantidade, String nomeItem){
+        
+        model.mudaQuantidade(quantidade, nomeItem);
         
     }
     
