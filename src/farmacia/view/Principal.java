@@ -376,7 +376,9 @@ public class Principal extends javax.swing.JFrame {
             String descricao = "<html>Nome: " + arrayRemedio.get(1).toString() +
                 "<br><br>Preço: R$" + arrayRemedio.get(4).toString() +
                 "<br><br>Quantidade: " + arrayRemedio.get(3).toString() +
-                "<br><br><br>bula:<br>" + arrayRemedio.get(2).toString();  
+                "<br><br><br>bula:<br>" + arrayRemedio.get(2).toString();
+            
+            this.nomeItemVenda = arrayRemedio.get(1).toString();
 
             descricaoLabelVenda.setText(descricao);
             escalarImagemVenda(controller.nomeImagem());
@@ -401,7 +403,9 @@ public class Principal extends javax.swing.JFrame {
             String descricao = "<html>Nome: " + arrayRemedio.get(1).toString() +
                 "<br><br>Preço: R$" + arrayRemedio.get(4).toString() +
                 "<br><br>Quantidade: " + arrayRemedio.get(3).toString() +
-                "<br><br><br>bula:<br>" + arrayRemedio.get(2).toString();          
+                "<br><br><br>bula:<br>" + arrayRemedio.get(2).toString(); 
+            
+            this.nomeItemEstoque = arrayRemedio.get(1).toString();
             
             descricaoLabelEstoque.setText(descricao);
             escalarImagemEstoque(controller.nomeImagem());
@@ -447,8 +451,7 @@ public class Principal extends javax.swing.JFrame {
 
     private void MudarButtonEstoqueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MudarButtonEstoqueActionPerformed
         
-        if(!nomeItemEstoque.contains("-")){
-            
+        if(!this.nomeItemEstoque.contains("-")){
             
             controller.mudaQuantidadeEstoque(this.quantidadeItemEstoque, 
                     this.nomeItemEstoque);
@@ -465,6 +468,11 @@ public class Principal extends javax.swing.JFrame {
                 "<br><br><br>bula:<br>" + arrayRemedio.get(2).toString();          
             
             descricaoLabelEstoque.setText(descricao);
+                        
+            if(this.nomeItemEstoque.contains(this.nomeItemVenda)){
+                
+                descricaoLabelVenda.setText(descricao);                
+            }
             escalarImagemEstoque(controller.nomeImagem());
             
         }

@@ -42,7 +42,7 @@ public class Controller {
     
     public void mudaQuantidadeEstoque(int quantidade, String nomeItem){
         
-        model.mudaQuantidade(quantidade, nomeItem);
+        this.model.mudaQuantidade(quantidade, nomeItem);
         
     }
     
