@@ -30,7 +30,7 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jTabbedPane1" max="32767" attributes="0"/>
+          <Component id="jTabbedPane1" pref="481" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -54,92 +54,117 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
+                  <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="valorTotalLabelVenda" max="32767" attributes="0"/>
-                                  <Component id="listaLabelVenda" alignment="0" pref="170" max="32767" attributes="0"/>
-                                  <Component id="titulo1jLabelVenda" alignment="0" max="32767" attributes="0"/>
-                              </Group>
+                              <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
+                              <Component id="titulo1jLabelVenda" min="-2" pref="170" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="concluirButtonVenda" min="-2" max="-2" attributes="0"/>
-                                  <Component id="limparButtonVendfa" min="-2" pref="91" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <Component id="valorTotalLabelVenda" min="-2" pref="192" max="-2" attributes="0"/>
+                                              <EmptySpace max="32767" attributes="0"/>
+                                              <Component id="limparButtonVendfa" min="-2" pref="100" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" attributes="0">
+                                              <Component id="listaLabelVenda" min="-2" pref="160" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="quantidadeLabelVenda" min="-2" pref="42" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="precoLabelVenda" min="-2" pref="85" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="110" max="-2" attributes="0"/>
+                                      <Component id="concluirButtonVenda" min="-2" pref="100" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
-                          </Group>
-                      </Group>
-                      <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="titulo2LabelVenda" alignment="0" max="32767" attributes="0"/>
-                          <Component id="ListaDeRemediosComboBoxVenda" alignment="1" max="32767" attributes="0"/>
-                          <Component id="fotoLabelVenda" alignment="1" min="-2" pref="170" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
-                              <Component id="adicionarButtonVenda" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" attributes="0">
                               <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="titulo3LabelVenda" max="32767" attributes="0"/>
-                                  <Group type="102" attributes="0">
-                                      <Component id="descricaoLabelVenda" min="-2" pref="170" max="-2" attributes="0"/>
-                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                  </Group>
-                                  <Component id="titulo4LabelVenda" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="titulo2LabelVenda" min="-2" pref="170" max="-2" attributes="0"/>
+                                  <Component id="fotoLabelVenda" min="-2" pref="170" max="-2" attributes="0"/>
+                                  <Component id="ListaDeRemediosComboBoxVenda" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace pref="52" max="32767" attributes="0"/>
+                      <EmptySpace pref="47" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                              <Component id="titulo3LabelVenda" min="-2" pref="179" max="-2" attributes="0"/>
+                              <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
+                                      <Component id="descricaoLabelVenda" min="-2" pref="170" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="titulo4LabelVenda" min="-2" pref="170" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace pref="42" max="-2" attributes="0"/>
+                              <Component id="adicionarButtonVenda" min="-2" pref="100" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="titulo1jLabelVenda" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="titulo4LabelVenda" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="titulo2LabelVenda" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="descricaoLabelVenda" min="-2" pref="250" max="-2" attributes="0"/>
-                                  <Component id="fotoLabelVenda" min="-2" pref="250" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="titulo3LabelVenda" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                              <Component id="titulo1jLabelVenda" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" attributes="0">
-                              <Component id="listaLabelVenda" min="-2" pref="220" max="-2" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="valorTotalLabelVenda" min="-2" pref="25" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                                      <Component id="ListaDeRemediosComboBoxVenda" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="limparButtonVendfa" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
+                              <Component id="titulo2LabelVenda" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="adicionarButtonVenda" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="concluirButtonVenda" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="listaLabelVenda" alignment="3" min="-2" pref="250" max="-2" attributes="0"/>
+                              <Component id="quantidadeLabelVenda" alignment="3" min="-2" pref="250" max="-2" attributes="0"/>
+                              <Component id="precoLabelVenda" alignment="3" min="-2" pref="250" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="fotoLabelVenda" alignment="1" min="-2" pref="250" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="35" max="32767" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="valorTotalLabelVenda" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="limparButtonVendfa" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                      <Component id="ListaDeRemediosComboBoxVenda" min="-2" pref="32" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                      <Component id="titulo4LabelVenda" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="descricaoLabelVenda" min="-2" pref="250" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace min="65" pref="65" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="adicionarButtonVenda" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                                  <Component id="concluirButtonVenda" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="titulo3LabelVenda" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="0" pref="59" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -153,7 +178,7 @@
             </Component>
             <Component class="javax.swing.JLabel" name="listaLabelVenda">
               <Properties>
-                <Property name="text" type="java.lang.String" value="&lt;html&gt;Nome / Pre&#xe7;o&lt;br&gt;&lt;br&gt;"/>
+                <Property name="text" type="java.lang.String" value="&lt;html&gt;Nome&lt;br&gt;&lt;br&gt;"/>
                 <Property name="verticalAlignment" type="int" value="1"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
@@ -210,7 +235,8 @@
             <Component class="javax.swing.JLabel" name="titulo3LabelVenda">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="&lt;html&gt;Adicionar item &lt;br&gt;na compra"/>
+                <Property name="text" type="java.lang.String" value="&lt;html&gt;Adicionar item&lt;br&gt;na compra"/>
+                <Property name="verticalAlignment" type="int" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="concluirButtonVenda">
@@ -254,7 +280,8 @@
             </Component>
             <Component class="javax.swing.JLabel" name="valorTotalLabelVenda">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Valor total R$ 0.00"/>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="text" type="java.lang.String" value="Valor total R$ 0,00"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
                     <EtchetBorder/>
@@ -269,6 +296,30 @@
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="limparButtonVendfaActionPerformed"/>
               </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="quantidadeLabelVenda">
+              <Properties>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="text" type="java.lang.String" value="&lt;html&gt;Qtd&lt;br&gt;&lt;br&gt;"/>
+                <Property name="verticalAlignment" type="int" value="1"/>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
+                    <EtchetBorder/>
+                  </Border>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="precoLabelVenda">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&lt;html&gt;Pre&#xe7;o&lt;br&gt;&lt;br&gt;"/>
+                <Property name="toolTipText" type="java.lang.String" value=""/>
+                <Property name="verticalAlignment" type="int" value="1"/>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
+                    <EtchetBorder/>
+                  </Border>
+                </Property>
+              </Properties>
             </Component>
           </SubComponents>
         </Container>
@@ -302,18 +353,18 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="quantidadeTextFieldEstoque" min="-2" pref="50" max="-2" attributes="0"/>
                                   <Component id="titulo3LabelEstoque" min="-2" max="-2" attributes="0"/>
-                                  <Component id="MudarButtonEstoque" min="-2" max="-2" attributes="0"/>
+                                  <Component id="MudarButtonEstoque" min="-2" pref="100" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace pref="87" max="32767" attributes="0"/>
+                      <EmptySpace pref="265" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace pref="43" max="32767" attributes="0"/>
+                      <EmptySpace pref="59" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="titulo1LabelEstoque" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="titulo2LabelEstoque" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -326,11 +377,11 @@
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="quantidadeTextFieldEstoque" min="-2" pref="20" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="MudarButtonEstoque" min="-2" max="-2" attributes="0"/>
+                              <Component id="MudarButtonEstoque" min="-2" pref="30" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                      <Component id="ListaDeRemediosComboBoxEstoque" min="-2" max="-2" attributes="0"/>
+                      <Component id="ListaDeRemediosComboBoxEstoque" min="-2" pref="32" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
                   </Group>
               </Group>
