@@ -2,6 +2,7 @@ package farmacia.controller;
 
 import farmacia.model.Model;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  *
@@ -15,10 +16,37 @@ public class Controller {
     private String nomeRemedio;
     private int quantidadeItem;
     
+    
     public Controller(Model model){
         
         this.model = model;
+    }
+    
+    public void finalizaVenda(ArrayList<String> nomeItemListaVenda,
+            ArrayList<Integer> quantidadeItemListaVenda){
         
+        Iterator percorreListaQuantidade = quantidadeItemListaVenda.
+                                            iterator(); 
+        Iterator percorreListaNome = nomeItemListaVenda.
+                                            iterator();
+        int quantidadeItemAux ,quantidadeItemAuxLista;
+        String nomeAux;
+        
+                while(percorreListaNome.hasNext()){
+                    
+                    nomeAux = percorreListaNome.next().toString();
+                    
+                   quantidadeItemAux = (int) retornaDescricao( 
+                           nomeAux).get(3);
+                  
+                   quantidadeItemAuxLista = (int) percorreListaQuantidade.next();
+                   
+                   quantidadeItemAux -= quantidadeItemAuxLista;
+                   
+                    mudaQuantidadeEstoque(quantidadeItemAux, nomeAux);
+                    
+                }               
+
     }
     
     public ArrayList retornaDescricao(String nomeRemedio){
