@@ -8,11 +8,11 @@ Usa:
 - SQL (SQLite).
 
 
-#Tela de Venda
+# Tela de Venda
 
-<img src="https://github.com/RogerioOcchiuzzi/Farmacia/blob/master/Imagens_README/Farmacia_venda.png" width="40%" height="40%">
+<img src="https://github.com/RogerioOcchiuzzi/Farmacia/blob/master/Imagens_README/Farmacia_venda.png" width="60%" height="60%">
 
 
-#Tela de Estoque
+# Tela de Estoque
 
-<img src="https://github.com/RogerioOcchiuzzi/Farmacia/blob/master/Imagens_README/Farmacia_estoque.png" width="40%" height="40%">
+<img src="https://github.com/RogerioOcchiuzzi/Farmacia/blob/master/Imagens_README/Farmacia_estoque.png" width="60%" height="60%">
