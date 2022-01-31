@@ -6,13 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
-/**
- *
- * @author rogerio
- */
+ 
 public class Model {
     
     private ArrayList arrayBusca;
@@ -84,8 +78,7 @@ public class Model {
     
     public void mudaQuantidade(int quantidade, String nomeItem){
 
-        try {   
-            
+        try {               
             
             String sqlString = "UPDATE farmacia SET quantidade = "+
                     quantidade + " WHERE nome_remedio = '"+

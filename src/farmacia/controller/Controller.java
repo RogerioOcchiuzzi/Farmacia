@@ -4,10 +4,6 @@ import farmacia.model.Model;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-/**
- *
- * @author rogerio
- */
 public class Controller {
     
     private Model model;
@@ -58,7 +54,6 @@ public class Controller {
         ArrayList arrayRemedio = model.getArrayBusca();
         
         this.imagenId = (int) arrayRemedio.get(0);
-        this.imagenId -=1;
         
         this.precoRemedio = (float) arrayRemedio.get(4);
         this.nomeRemedio = arrayRemedio.get(1).toString();
